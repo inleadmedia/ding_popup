@@ -14,7 +14,7 @@ Drupal.behaviors.ding_popup_form_submit = {
     $('.ui-dialog-content input[type=text]:not(.ding-popup-processed), .ui-dialog-content input[type=password]:not(.ding-popup-processed)').addClass('ding-popup-processed').each(function () {
       $(this).keypress(function (event) {
         if (event.which == 13) {
-          $($(this.form).find('input[type=submit]').get(0)).trigger('mousedown');
+          $($(this.form).find('[type=submit]').get(0)).trigger('click');
           return false;
         }
       });
